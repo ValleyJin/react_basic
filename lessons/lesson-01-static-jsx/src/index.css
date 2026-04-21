@@ -62,9 +62,16 @@ body {
   margin-top: 1.5rem;
 }
 
-@media (min-width: 960px) {
+@media (min-width: 720px) {
   .compare-columns {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    align-items: start;
+  }
+}
+
+@media (min-width: 1280px) {
+  .compare-columns {
+    grid-template-columns: repeat(4, 1fr);
     align-items: start;
   }
 }
