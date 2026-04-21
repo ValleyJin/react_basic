@@ -1,0 +1,195 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, sans-serif;
+  line-height: 1.5;
+  color: #1a1a1a;
+  background: #faf7f2;
+}
+
+.layout {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.skip {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+}
+
+.skip:focus {
+  left: 12px;
+  top: 12px;
+  z-index: 10;
+  background: #fff;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #cfc4b8;
+}
+
+.top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.9rem 1.25rem;
+  border-bottom: 1px solid #e6dfd4;
+  background: #fffdf8;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.brand {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.nav {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #3a2f25;
+  padding: 0.35rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+}
+
+.nav a:hover {
+  border-color: #e6dfd4;
+  background: #fff;
+}
+
+.nav a.active {
+  border-color: #cfc4b8;
+  background: #fff;
+}
+
+.main {
+  width: min(720px, 100%);
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem;
+}
+
+.footer {
+  padding: 1rem 1.25rem;
+  border-top: 1px solid #e6dfd4;
+  background: #fffdf8;
+}
+
+.page {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.muted {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.list {
+  margin: 0.5rem 0 0;
+  padding-left: 1.1rem;
+}
+
+.menu-grid {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.card {
+  border: 1px solid #e6dfd4;
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  background: #fff;
+}
+
+.card h3 {
+  margin: 0 0 0.25rem;
+  font-size: 1.05rem;
+}
+
+.price {
+  margin: 0;
+  font-weight: 600;
+  color: #3a2f25;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.form {
+  display: grid;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  border: 1px dashed #cfc4b8;
+  background: #fffdf8;
+}
+
+label {
+  display: grid;
+  gap: 0.25rem;
+  font-size: 0.9rem;
+}
+
+input,
+textarea {
+  border: 1px solid #cfc4b8;
+  border-radius: 8px;
+  padding: 0.45rem 0.6rem;
+  font: inherit;
+}
+
+textarea {
+  min-height: 96px;
+  resize: vertical;
+}
+
+button {
+  border: 1px solid #cfc4b8;
+  background: #fff;
+  border-radius: 8px;
+  padding: 0.45rem 0.75rem;
+  cursor: pointer;
+  justify-self: start;
+}
+
+button:hover {
+  background: #f3ece3;
+}
+
+.danger {
+  border-color: #e2b1a6;
+  color: #7a2f22;
+}
+
+.error {
+  margin: 0;
+  color: #7a2f22;
+  font-size: 0.9rem;
+}
+
+.ok {
+  margin: 0;
+  color: #1f5f3a;
+  font-size: 0.9rem;
+}

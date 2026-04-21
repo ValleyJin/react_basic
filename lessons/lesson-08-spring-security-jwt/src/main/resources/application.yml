@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: lesson-08-spring-security-jwt
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5433/beanlog_lesson08}
+    username: ${SPRING_DATASOURCE_USERNAME:beanlog}
+    password: ${SPRING_DATASOURCE_PASSWORD:beanlog}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+server:
+  port: ${SERVER_PORT:8080}
+
+# HS256용 비밀키 — 운영에서는 환경 변수로 긴 무작위 문자열을 넣는다. (교육용 기본값)
+app:
+  jwt:
+    secret: ${APP_JWT_SECRET:beanlog-dev-only-change-me-use-32chars-minimum-for-hs256!!}
+    expiration-ms: ${APP_JWT_EXPIRATION_MS:86400000}

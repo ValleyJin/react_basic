@@ -1,0 +1,7 @@
+/**
+ * [개념 예시] Tailwind 사용 시 main.jsx가 import하는 CSS의 흔한 시작 형태
+ * 실제 프로젝트에서는 postcss.config.js, tailwind.config.js 등이 함께 필요합니다.
+ */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

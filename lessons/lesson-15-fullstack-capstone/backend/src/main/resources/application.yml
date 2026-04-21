@@ -1,0 +1,22 @@
+# Spring Boot 설정 — 15강 캡스톤 백엔드
+# 환경 변수로 덮어쓸 수 있게 기본값을 둔다(로컬 docker-compose 와 맞춤).
+spring:
+  application:
+    name: lesson-15-fullstack-capstone
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5438/beanlog_lesson15}
+    username: ${SPRING_DATASOURCE_USERNAME:beanlog}
+    password: ${SPRING_DATASOURCE_PASSWORD:beanlog}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+server:
+  port: ${SERVER_PORT:8080}
+
+app:
+  jwt:
+    # HS256 대칭키 — 개발용. 운영에서는 비밀 관리(KMS·Vault)와 키 길이를 반드시 검토한다.
+    secret: ${APP_JWT_SECRET:beanlog-dev-only-change-me-use-32chars-minimum-for-hs256!!}
+    expiration-ms: ${APP_JWT_EXPIRATION_MS:86400000}

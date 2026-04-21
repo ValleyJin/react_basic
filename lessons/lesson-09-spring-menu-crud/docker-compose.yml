@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: beanlog-lesson09-postgres
+    environment:
+      POSTGRES_USER: beanlog
+      POSTGRES_PASSWORD: beanlog
+      POSTGRES_DB: beanlog_lesson09
+    ports:
+      - "5434:5432"
+    volumes:
+      - lesson09_pgdata:/var/lib/postgresql/data
+
+volumes:
+  lesson09_pgdata:

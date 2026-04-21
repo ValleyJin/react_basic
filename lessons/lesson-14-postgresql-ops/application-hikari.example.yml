@@ -1,0 +1,13 @@
+# Spring Boot에서 연결 풀(HikariCP)을 조정하는 예시 (복사해 참고만 — 이 폴더에는 웹앱 없음)
+#
+# 실제 프로젝트의 application.yml 에 datasource 아래에 넣을 수 있다.
+
+spring:
+  datasource:
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 2
+      connection-timeout: 30000
+      idle-timeout: 600000
+      max-lifetime: 1800000
+      pool-name: beanlog-pool

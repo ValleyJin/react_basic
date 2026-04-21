@@ -1,0 +1,16 @@
+# 15강 캡스톤 전용 PostgreSQL (호스트 포트 5438 — 12~14강과 충돌하지 않게 분리)
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: beanlog-lesson15-postgres
+    environment:
+      POSTGRES_USER: beanlog
+      POSTGRES_PASSWORD: beanlog
+      POSTGRES_DB: beanlog_lesson15
+    ports:
+      - "5438:5432"
+    volumes:
+      - lesson15_pgdata:/var/lib/postgresql/data
+
+volumes:
+  lesson15_pgdata:

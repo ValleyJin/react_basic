@@ -1,0 +1,16 @@
+# 교육용: PostgreSQL만 띄운다. 앱은 호스트에서 mvn spring-boot:run 으로 실행하는 흐름을 가정.
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: beanlog-lesson07-postgres
+    environment:
+      POSTGRES_USER: beanlog
+      POSTGRES_PASSWORD: beanlog
+      POSTGRES_DB: beanlog_lesson07
+    ports:
+      - "5432:5432"
+    volumes:
+      - lesson07_pgdata:/var/lib/postgresql/data
+
+volumes:
+  lesson07_pgdata:

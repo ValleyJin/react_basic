@@ -1,0 +1,6 @@
+/* 비교 패널 안에서 메뉴 카드 그리드 — CSS Modules 열에서만 사용 */
+.menuGrid {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}

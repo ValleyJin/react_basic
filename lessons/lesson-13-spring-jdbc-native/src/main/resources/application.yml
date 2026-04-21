@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: lesson-13-spring-jdbc-native
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5436/beanlog_lesson13}
+    username: ${SPRING_DATASOURCE_USERNAME:beanlog}
+    password: ${SPRING_DATASOURCE_PASSWORD:beanlog}
+  sql:
+    init:
+      mode: always
+      encoding: UTF-8
+
+server:
+  port: ${SERVER_PORT:8080}
+
+logging:
+  level:
+    org.springframework.jdbc.core: debug

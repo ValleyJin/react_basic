@@ -1,0 +1,6 @@
+/* [개념 예시] 빌드 후 .primary 가 파일마다 다른 고유 클래스명으로 바뀔 수 있음 */
+.primary {
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #cfc4b8;
+}

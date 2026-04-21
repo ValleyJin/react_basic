@@ -1,0 +1,18 @@
+/* Header — CSS Modules 변형 전용 (전역 .muted 와 분리) */
+.header {
+  border-bottom: 1px solid #e6dfd4;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #1a1a1a;
+}
+
+.subtitle {
+  margin: 0.25rem 0 0;
+  color: #555;
+  font-size: 0.95rem;
+}

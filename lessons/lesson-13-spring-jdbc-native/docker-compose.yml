@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: beanlog-lesson13-postgres
+    environment:
+      POSTGRES_USER: beanlog
+      POSTGRES_PASSWORD: beanlog
+      POSTGRES_DB: beanlog_lesson13
+    ports:
+      - "5436:5432"
+    volumes:
+      - lesson13_pgdata:/var/lib/postgresql/data
+
+volumes:
+  lesson13_pgdata:
