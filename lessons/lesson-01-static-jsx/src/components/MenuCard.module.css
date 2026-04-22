@@ -1,18 +1,26 @@
 /* MenuCard — CSS Modules 변형 전용 */
 .card {
-  border: 1px solid #e6dfd4;
-  border-radius: 10px;
-  padding: 0.75rem 1rem;
-  background: #fff;
+  border: 1px solid #dbc8ff;
+  border-radius: 14px;
+  padding: 0.9rem 1rem;
+  background: linear-gradient(180deg, #ffffff 0%, #f9f4ff 100%);
+  box-shadow: 0 14px 24px -22px #7e22ce;
 }
 
 .name {
-  margin: 0 0 0.25rem;
-  font-size: 1.05rem;
+  margin: 0 0 0.4rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #4c1d95;
 }
 
 .price {
   margin: 0;
-  font-weight: 600;
-  color: #3a2f25;
+  display: inline-block;
+  padding: 0.12rem 0.5rem;
+  border-radius: 999px;
+  font-weight: 700;
+  color: #fff;
+  background: #7c3aed;
+  font-size: 0.85rem;
 }
